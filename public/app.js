@@ -44,7 +44,7 @@
 
     // Ask for access to the camera
     navigator.mediaDevices.getUserMedia({
-        audio: true
+        video: true
     }).then(stream => {
         face.src = URL.createObjectURL(stream);
         face.play();

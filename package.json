@@ -1,0 +1,22 @@
+{
+  "name": "brows",
+  "version": "1.0.0",
+  "description": "No more lopsided brows!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goodforenergy/snazzy-brows.git"
+  },
+  "author": "goodforenergy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goodforenergy/snazzy-brows/issues"
+  },
+  "homepage": "https://github.com/goodforenergy/snazzy-brows#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
