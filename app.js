@@ -3,6 +3,8 @@
     'use strict';
 
     const brows = document.getElementById('brows');
+    const face = document.getElementById('face');
+
     const mc = new Hammer.Manager(brows);
 
     const pinch = new Hammer.Pinch();
@@ -38,5 +40,15 @@
         transforms.push(`scale(${currentScale})`);
         transforms.push(`translate(${currentDeltaX}px, ${currentDeltaY}px)`);
         brows.style.transform = transforms.join(' ');
+    });
+
+    // Ask for access to the camera
+    navigator.mediaDevices.getUserMedia({
+        audio: true
+    }).then(stream => {
+        face.src = URL.createObjectURL(stream);
+        face.play();
+    }).catch(err => {
+        face.innerHTML = `${err.name}: ${err.message}`;
     });
 }());
